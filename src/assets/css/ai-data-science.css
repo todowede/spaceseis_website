@@ -1,0 +1,104 @@
+/* AI & Data Science Page Styles */
+
+.page-hero {
+    background: linear-gradient(rgba(30, 60, 114, 0.9), rgba(42, 82, 152, 0.9)), 
+                url('../images/case-studies/ai-neural-bg.jpg') center/cover;
+    color: white;
+    padding: 8rem 0 4rem;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: var(--accent-color);
+    font-weight: 300;
+}
+
+/* Reuse case study styles */
+.case-study {
+    padding: 6rem 0;
+}
+
+.case-study-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.case-study-header h2 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.case-study-intro {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--text-light);
+}
+
+.case-study-content {
+    display: grid;
+    gap: 4rem;
+}
+
+.methodology,
+.results {
+    background: var(--section-bg);
+    padding: 3rem;
+    border-radius: 10px;
+}
+
+.methodology h3,
+.results h3 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.methodology ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.methodology li {
+    padding: 0.5rem 0;
+    border-left: 3px solid var(--accent-color);
+    padding-left: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.result-item {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.result-item h4 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.visualizations h3 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.viz-placeholder {
+    background: #f0f0f0;
+    border: 2px dashed #ccc;
+    padding: 4rem 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    color: var(--text-light);
+    font-style: italic;
+}

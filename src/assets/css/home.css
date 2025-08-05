@@ -1,0 +1,337 @@
+/* Home Page Specific Styles */
+
+/* Hero Carousel Section */
+.hero {
+    background: #ffffff;
+    padding: 4rem 0;
+    margin-top: 140px;
+    width: 100%;
+}
+
+.hero-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+}
+
+/* Initial positions - all slides off-screen right except first */
+.carousel-slide:nth-child(1) { transform: translateX(0%); }    /* First slide active */
+.carousel-slide:nth-child(2) { transform: translateX(100%); }  /* Second slide right */
+.carousel-slide:nth-child(3) { transform: translateX(200%); }  /* Third slide further right */
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.carousel-caption {
+    text-align: center;
+    padding: 2rem 0;
+    background: transparent;
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+    color: #1e3c72; 
+}
+
+.slide-out-left {
+    transform: translateX(-100%);
+}
+
+.slide-out-right {
+    transform: translateX(100%);
+}
+
+.slide-in-left {
+    transform: translateX(0);
+}
+
+.slide-in-right {
+    transform: translateX(0);
+}
+
+.carousel-btn {
+    position: absolute;
+    top: -50px;            /* TOP OF CAROUSEL */
+    background: rgba(255,255,255,0.9);
+    border: 2px solid #ddd;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.carousel-prev {
+    right: 90px;          /* LEFT ARROW - FURTHER RIGHT */
+    transform: none;
+}
+
+.carousel-next {
+    right: 40px;          /* RIGHT ARROW - CLOSE TO EDGE */
+    transform: none;
+}
+
+.carousel-btn:hover {
+    background: white;
+    /*transform: translateY(-50%) scale(1.1);*/
+    /*box-shadow: 0 6px 20px rgba(0,0,0,0.3);*/
+}
+
+.carousel-indicators {
+    display: none;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background: #ccc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background: var(--primary-color);
+    transform: scale(1.2);
+}
+
+.indicator:hover {
+    background: var(--secondary-color);
+}
+
+/* Services Section */
+.services {
+    padding: 6rem 0;
+    background: var(--section-bg);
+}
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 4rem;
+    color: #1e3c72;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    background: transparent;        /* REMOVE BACKGROUND */
+    border: none;                   /* REMOVE BORDER */
+    box-shadow: none;              /* REMOVE SHADOW */
+}
+
+.service-image-placeholder {
+    height: 250px;
+    background: #f8f9fa;
+    border-radius: 15px;
+    margin-bottom: 2rem;           /* SPACE BETWEEN BOX AND DESCRIPTION */
+    border: 2px solid #ddd;        /* CONSISTENT BORDER FOR ALL */
+}
+
+.service-description {
+    display: flex;
+    flex-direction: column;
+    min-height: 120px;             /* CONSISTENT HEIGHT FOR TEXT AREA */
+}
+
+.service-description p {
+    color: #1e3c72;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;                  /* TAKES AVAILABLE SPACE */
+}
+
+.service-link {
+    align-self: flex-start;
+    margin-top: auto;              /* PUSHES TO BOTTOM */
+}
+
+/* Why SpaceSeis Section */
+.why-spaceseis {
+    padding: 6rem 0;
+}
+
+.why-spaceseis h2 {
+    text-align: center;
+    margin-bottom: 4rem;
+    color: #1e3c72;    /* DARK NAVY BLUE */
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.feature {
+    position: relative;
+    height: 250px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow-hover);
+    transition: all 0.3s ease;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 2rem;        /* SPACE FOR TEXT BELOW */
+}
+
+.feature-content {
+    /* REMOVE all positioning - make it normal flow */
+    padding: 1rem 0;
+    color: #1e3c72;
+    text-align: center;
+}
+
+.feature h3 {
+    color: #1e3c72;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: none;
+}
+
+.feature p {
+    color: #1e3c72;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+    text-shadow: none;
+}
+
+/* Background images for each feature */
+.scientific-rigor {
+    background-image: url('../images/features/scientific_rigor_bg.svg');
+}
+
+.signal-processing {
+    background-image: url('../images/features/signal_processing_bg.svg');
+}
+
+.strategic-impact {
+    background-image: url('../images/features/strategic_impact_bg.svg');
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .hero-carousel {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 2rem 0;
+        margin-top: 80px;
+    }
+    
+    .hero-carousel {
+        padding: 0 1rem;
+    }
+    
+    .carousel-container {
+        height: 250px;
+    }
+    
+    .carousel-caption {
+        padding: 2rem 1rem 1rem;
+    }
+    
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+    
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+    
+    .carousel-prev {
+        left: 10px;
+    }
+    
+    .carousel-next {
+        right: 10px;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .feature {
+        height: 200px;
+    }
+    
+    .feature h3 {
+        font-size: 1.3rem;
+    }
+    
+    .feature p {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,34 @@
+{
+  "placeholder_datasets": {
+    "sentinel2_coastal": {
+      "description": "Sentinel-2 imagery for coastal monitoring",
+      "format": "GeoTIFF",
+      "size": "~500MB per scene",
+      "bands": [
+        "B02",
+        "B03",
+        "B04",
+        "B08",
+        "B11"
+      ],
+      "resolution": "10m",
+      "status": "placeholder_needed"
+    },
+    "das_subsurface": {
+      "description": "DAS strain rate measurements",
+      "format": "HDF5/NetCDF",
+      "size": "~2GB",
+      "channels": 20000,
+      "sampling_rate": "1000 Hz",
+      "status": "placeholder_needed"
+    },
+    "seismic_horizons": {
+      "description": "3D seismic and horizon interpretations",
+      "format": "SEG-Y",
+      "size": "~1GB",
+      "dimensions": "1000x1000x500",
+      "horizons": 50,
+      "status": "placeholder_needed"
+    }
+  }
+}

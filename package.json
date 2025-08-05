@@ -1,0 +1,23 @@
+{
+  "name": "spaceseis-analytics-website",
+  "version": "1.0.0",
+  "description": "SpaceSeis Analytics corporate website - Science, Signal, and Strategy",
+  "main": "src/pages/index.html",
+  "scripts": {
+    "start": "python -m http.server 8000 --directory src",
+    "build": "echo 'Build process to be implemented'",
+    "test": "echo 'Tests to be implemented'"
+  },
+  "keywords": [
+    "geophysics",
+    "satellite-data",
+    "earth-observation",
+    "subsurface-analytics",
+    "artificial-intelligence",
+    "data-science"
+  ],
+  "author": "SpaceSeis Analytics Ltd.",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {}
+}
